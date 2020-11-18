@@ -8,7 +8,15 @@ namespace QuickBuy.Repositorio.Config
     {
         public void Configure(EntityTypeBuilder<Usuario> builder)
         {
-            throw new System.NotImplementedException();
+            builder.HasKey(x => x.Id);
+
+            //Builder utiliza o padrão Fluent
+            builder.Property(x => x.Email).IsRequired().HasMaxLength(50);
+            builder.Property(x => x.Senha).IsRequired().HasMaxLength(400);
+            builder.Property(x => x.Nome).IsRequired().HasMaxLength(50).HasColumnType("varchar");
+            builder.Property(x => x.SobreNome).IsRequired().HasMaxLength(50).HasColumnType("varchar");
+
+            //builder.Property(x => x.Pedidos);
         }
     }
 }
