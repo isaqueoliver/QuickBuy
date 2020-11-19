@@ -12,7 +12,7 @@ namespace QuickBuy.Dominio.Entidades
         /// <summary>
         /// Um Usuario pode ter Nenhum ou Muitos pedidos 0..*
         /// </summary>
-        public ICollection<Pedido> Pedidos { get; set; }
+        public virtual ICollection<Pedido> Pedidos { get; set; }
 
         public override void Validate()
         {

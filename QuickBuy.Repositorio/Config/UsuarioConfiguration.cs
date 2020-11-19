@@ -15,6 +15,7 @@ namespace QuickBuy.Repositorio.Config
             builder.Property(x => x.Senha).IsRequired().HasMaxLength(400);
             builder.Property(x => x.Nome).IsRequired().HasMaxLength(50).HasColumnType("varchar");
             builder.Property(x => x.SobreNome).IsRequired().HasMaxLength(50).HasColumnType("varchar");
+            builder.HasMany(x => x.Pedidos).WithOne(y => y.Usuario);
 
             //builder.Property(x => x.Pedidos);
         }
