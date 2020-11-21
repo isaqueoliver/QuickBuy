@@ -1,7 +1,7 @@
 {
   "ConnectionStrings": {
     "SqlServerConnection": "",
-    "QuickBuyDB": "server=127.0.0.1;uid=root;pwd=Oli_HSA32@ger;database=QuickBuyDB"
+    "QuickBuyDB": "server=localhost;uid=root;pwd=Oli_HSA32@ger;database=QuickBuyDB"
   }
 }
 
